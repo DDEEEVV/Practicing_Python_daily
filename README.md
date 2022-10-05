@@ -5,3 +5,5 @@
 ### Certificates earned during this Daily Practice:
 
 >> ![Python Basics](certificates/python_basics_coursera.png)
+
+>> ![Python and Statistics for Financial Analysis](certificates/Python_Statistics_FinancialAnalysis.png)
