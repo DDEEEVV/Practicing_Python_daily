@@ -6,7 +6,7 @@ This repository represents simple web app for calculating option prices (Europea
 2. Monte Carlo simulation    
 3. Binomial model    
 
-Each model has various parameters that user needs to import:  
+* Each model has various parameters that user needs to import:  
 
 - Ticker  
 - Strike price  
@@ -17,8 +17,6 @@ Each model has various parameters that user needs to import:
 Option pricing models are implemented in [Python 3.7](https://www.python.org/downloads/release/python-377/). Latest spot price, for specified ticker, is fetched from Yahoo Finance API using [pandas-datareader](https://pandas-datareader.readthedocs.io/en/latest/). Visualization of the models through simple web app is implemented using [streamlit](https://www.streamlit.io/) library.  
 
 When data is fetched from Yahoo Finance API using pandas-datareader, it's cached with [request-cache](https://github.com/reclosedev/requests-cache) library is sqlite db, so any subsequent testing and changes in model parameters with same underlying instrument won't result in duplicated request for fethcing already fetched data.
-
-This implementation was done as project work on the course [Special Functions (Applied Mathematics)](https://www.etf.bg.ac.rs/en/fis/karton_predmeta/13M081SPEF-2013) on Master's degree in Software Engineering.
 
 ## Streamlit web app  
 
