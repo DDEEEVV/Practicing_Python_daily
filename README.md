@@ -1,6 +1,6 @@
-# Practicing_Python_daily
+# Practicing_Python_Daily
 
-## After graduating the FinTech Boot Camp from Rutgers University I starting practicing what I learned so far, and also learning new skills.
+## After graduating the FinTech Boot Camp from Rutgers University I started practicing what I learned so far, also learning and exploring new things.
 
 ### Certificates earned during this Daily Practice:
 
