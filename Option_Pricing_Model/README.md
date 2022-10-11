@@ -92,7 +92,7 @@ Then you would need to activate that newly created python environment:
 Once you have your python environment activated, first you would need to download all necessary python modules with pip. There is Requirements.txt file in scr directory. You can use the following command to automatically download all dependencies:
 `pip install -r Requirements.txt`  
 
-When the download is completed, you can run streamlit app with:
+You can run this app directly from an open integrated terminal on mac by typing:
 `streamlit run streamlit_app.py`
 
 
