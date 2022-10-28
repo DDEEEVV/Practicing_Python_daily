@@ -9,7 +9,7 @@ from .base import OptionPricingModel
 class BinomialTreeModel(OptionPricingModel):
     """ 
     Class implementing calculation for European option price using BOPM (Binomial Option Pricing Model).
-    It caclulates option prices in discrete time (lattice based), in specified number of time points between date of valuation and exercise date.
+    It calculates option prices in discrete time (lattice based), in specified number of time points between date of valuation and exercise date.
     This pricing model has three steps:
     - Price tree generation
     - Calculation of option value at each final node 
@@ -21,7 +21,7 @@ class BinomialTreeModel(OptionPricingModel):
         Initializes variables used in Black-Scholes formula .
 
         underlying_spot_price: current stock or other underlying spot price
-        strike_price: strike price for option cotract
+        strike_price: strike price for option contract
         days_to_maturity: option contract maturity/exercise date
         risk_free_rate: returns on risk-free assets (assumed to be constant until expiry date)
         sigma: volatility of the underlying asset (standard deviation of asset's log returns)

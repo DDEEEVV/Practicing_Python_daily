@@ -15,7 +15,7 @@ class OPTION_PRICING_MODEL(Enum):
 
 @st.cache
 def get_historical_data(ticker):
-    """Getting historical data for speified ticker and caching it with streamlit app."""
+    """Getting historical data for specified ticker and caching it with streamlit app."""
     return Ticker.get_historical_data(ticker)
 
 # Ignore the Streamlit warning for using st.pyplot()
@@ -32,7 +32,7 @@ st.subheader(f'Pricing method: {pricing_method}')
 
 if pricing_method == OPTION_PRICING_MODEL.BLACK_SCHOLES.value:
     # Parameters for Black-Scholes model
-    ticker = st.text_input('Ticker symbol', 'AAPL')
+    ticker = st.text_input('Ticker symbol', 'BTC-USD')
     strike_price = st.number_input('Strike price', 1)
     risk_free_rate = st.slider('Risk-free rate (%)', 0, 100, 10)
     sigma = st.slider('Sigma (%)', 0, 100, 20)
@@ -45,7 +45,7 @@ if pricing_method == OPTION_PRICING_MODEL.BLACK_SCHOLES.value:
         Ticker.plot_data(data, ticker, 'Adj Close')
         st.pyplot()
 
-        # Formating selected model parameters
+        # Formatting selected model parameters
         spot_price = Ticker.get_last_price(data, 'Adj Close') 
         risk_free_rate = risk_free_rate / 100
         sigma = sigma / 100
@@ -77,7 +77,7 @@ elif pricing_method == OPTION_PRICING_MODEL.MONTE_CARLO.value:
         Ticker.plot_data(data, ticker, 'Adj Close')
         st.pyplot()
 
-        # Formating simulation parameters
+        # Formatting simulation parameters
         spot_price = Ticker.get_last_price(data, 'Adj Close') 
         risk_free_rate = risk_free_rate / 100
         sigma = sigma / 100
@@ -101,7 +101,7 @@ elif pricing_method == OPTION_PRICING_MODEL.MONTE_CARLO.value:
 
 elif pricing_method == OPTION_PRICING_MODEL.BINOMIAL.value:
     # Parameters for Binomial-Tree model
-    ticker = st.text_input('Ticker symbol', 'AAPL')
+    ticker = st.text_input('Ticker symbol', 'BTC-USD')
     strike_price = st.number_input('Strike price', 1)
     risk_free_rate = st.slider('Risk-free rate (%)', 0, 100, 10)
     sigma = st.slider('Sigma (%)', 0, 100, 20)
@@ -115,7 +115,7 @@ elif pricing_method == OPTION_PRICING_MODEL.BINOMIAL.value:
         Ticker.plot_data(data, ticker, 'Adj Close')
         st.pyplot()
 
-        # Formating simulation parameters
+        # Formatting simulation parameters
         spot_price = Ticker.get_last_price(data, 'Adj Close') 
         risk_free_rate = risk_free_rate / 100
         sigma = sigma / 100
